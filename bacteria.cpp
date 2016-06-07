@@ -44,9 +44,6 @@ int main(int argc,char** argv) {
 
 			c = ifile.get();
 
-			if (ifile.fail()) {
-				break;
-			}
 			if (byte_counter == rand_byte ) { 
 				int insert = rand() % 6;
 				if (insert == 0) {
