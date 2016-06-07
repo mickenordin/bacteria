@@ -1,5 +1,7 @@
 #include <fstream>
 #include <cstdlib>
+#include <climits>
+#include <ctime>
 #include <iostream>
 
 using namespace std;
@@ -18,6 +20,7 @@ int main(int argc,char** argv) {
                 ifstream ifile;
                 ifile.open(argv[0], ios::binary) ;
                 int filesize = file_size(argv[0]);
+                srand( time(NULL) );
                 int rand_byte = rand() %  ( filesize + 1 );
                 
                 // Devide
@@ -40,7 +43,7 @@ int main(int argc,char** argv) {
                                 break;
                         }
                         if (byte_counter == rand_byte and i == 1) {
-                                int bit = rand() % 8;
+                                int bit = rand() % CHAR_BIT;
                                 cout << "Mutating bit: " << bit << " of byte: " << byte_counter << '\n';
                                 c ^= (1u << bit);
                         }
