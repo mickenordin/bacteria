@@ -1,5 +1,3 @@
-# bacteria
-Just an experiment to create a computer bacteria
-
-Build with:
-g++ -static -std=c++11 -o $(tempfile -d . -p bact-) bacteria.cpp
+# Repo moved
+This repo has now been moved to my own code hosting solution on smolnet.org:
+* [Bacteria](https://code.smolnet.org/micke/bacteria)
